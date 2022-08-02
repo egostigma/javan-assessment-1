@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class FamilyMemberController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *

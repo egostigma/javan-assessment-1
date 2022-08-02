@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\FamilyMemberController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::controller(FamilyMemberController::class)->prefix("family-member/")->as("family-member.")->group(function () {
+    Route::get("/", "index")->name("index");
+    Route::post("/", "store")->name("store");
+    Route::get("/{id}", "show")->name("show");
+    Route::get("/{id}/parent-siblings", "parentSiblings")->name("parent-siblings");
+    Route::get("/{id}/cousins", "cousins")->name("cousins");
+    Route::get("/{id}/children", "children")->name("children");
+    Route::get("/{id}/grand-children", "grandChildren")->name("grand-children");
+    Route::put("/{id}", "update")->name("update");
+    Route::delete("/{id}", "destroy")->name("destroy");
 });

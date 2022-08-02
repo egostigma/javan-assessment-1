@@ -1,0 +1,371 @@
+{
+	"info": {
+		"_postman_id": "26bab372-543b-401d-b2bd-e8c00b766d7f",
+		"name": "Javan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18177684"
+	},
+	"item": [
+		{
+			"name": "List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/family-member",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"family-member"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "budi",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/family-member/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"family-member",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Parent Siblings",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/family-member/7/parent-siblings?gender=f",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"family-member",
+						"7",
+						"parent-siblings"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "gender",
+							"value": "f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cousins",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/family-member/10/cousins?gender=m",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"family-member",
+						"10",
+						"cousins"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "gender",
+							"value": "m"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Children",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/family-member/1/children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"family-member",
+						"1",
+						"children"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "gender",
+							"value": "m",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Grandchildren",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/family-member/1/grand-children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"family-member",
+						"1",
+						"grand-children"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "gender",
+							"value": "m",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Grandaughter",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/family-member/1/grand-children?gender=f",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"family-member",
+						"1",
+						"grand-children"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "gender",
+							"value": "f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Mustopa",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "m",
+							"type": "text"
+						},
+						{
+							"key": "parent_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/family-member",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"family-member"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Mustopaa",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "m",
+							"type": "text"
+						},
+						{
+							"key": "parent_id",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/family-member/29",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"family-member",
+						"29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{host}}/api/family-member/14",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"family-member",
+						"14"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

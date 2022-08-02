@@ -13,12 +13,12 @@ use App\Http\Controllers\FamilyMemberController;
 |
 */
 
-Route::controller(FamilyMemberController::class)->as('family-member.')->group(function () {
-    Route::get('/', 'index')->name('index');
-    Route::get('/create', 'create')->name('create');
-    Route::post('/store', 'store')->name('store');
-    Route::get('/{member}/edit', 'edit')->name('edit');
-    Route::put('/{member}/update', 'update')->name('update');
-    Route::delete('/{member}/delete', 'destroy')->name('destroy');
-    Route::get('/{member}', 'show')->name('show');
+Route::controller(FamilyMemberController::class)->as("family-member.")->group(function () {
+    Route::get("/", "index")->name("index");
+    Route::get("/create", "create")->name("create");
+    Route::post("/store", "store")->name("store");
+    Route::get("/{member}/edit", "edit")->name("edit");
+    Route::put("/{member}/update", "update")->name("update");
+    Route::delete("/{member}/delete", "destroy")->name("destroy");
+    Route::get("/{member}", "show")->name("show");
 });
