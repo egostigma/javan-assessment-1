@@ -1,0 +1,35 @@
+// https://aka.ms/devcontainer.json
+{
+	"name": "Javan Assessment 1 (Extend)",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "app",
+	"workspaceFolder": "/var/www/html",
+	"settings": {},
+	"extensions": [
+		"mikestead.dotenv",
+		"amiralizadeh9480.laravel-extra-intellisense",
+		"ryannaddy.laravel-artisan",
+		"onecentlin.laravel5-snippets",
+		"onecentlin.laravel-blade",
+		"visualstudioexptteam.vscodeintellicode",
+		"ms-azuretools.vscode-docker",
+		"bmewburn.vscode-intelephense-client",
+		"christian-kohler.path-intellisense",
+		"onecentlin.laravel-extension-pack",
+		"eg2.vscode-npm-script",
+		"christian-kohler.npm-intellisense",
+		"ecmel.vscode-html-css",
+		"pranaygp.vscode-css-peek",
+		"esbenp.prettier-vscode",
+		"shufo.vscode-blade-formatter",
+		"streetsidesoftware.code-spell-checker",
+		"xdebug.php-debug"
+	],
+	"remoteUser": "sail",
+	"postCreateCommand": "chown -R 1000:1000 /var/www/html"
+	// "forwardPorts": [],
+	// "runServices": [],
+	// "shutdownAction": "none",
+}
