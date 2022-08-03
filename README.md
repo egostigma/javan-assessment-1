@@ -58,6 +58,11 @@ Open the app on your browser at <http://127.0.0.1:8000>
 
 ## **API USAGE**
 
+Open API specification can be found here:
+
+[collection](https://github.com/egostigma/javan-assessment-1/blob/master/openAPI/Javan_Assessment_1.postman_collection.json)\
+[environment](https://github.com/egostigma/javan-assessment-1/blob/master/openAPI/Javan_Assessment_1.postman_environment.json)
+
 ----
 
 ### **Family Tree**
