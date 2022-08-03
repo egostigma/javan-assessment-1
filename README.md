@@ -801,7 +801,7 @@ Open the app on your browser at <http://127.0.0.1:8000>
         parent_id: "5", 
       },
       dataType: "json",
-      type : "GET",
+      type : "POST",
       success : function(r) {
         console.log(r);
       }
