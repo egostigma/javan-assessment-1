@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "26bab372-543b-401d-b2bd-e8c00b766d7f",
-		"name": "Javan",
+		"name": "Javan Assessment 1",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "18177684"
 	},
@@ -309,7 +309,7 @@
 					"urlencoded": [
 						{
 							"key": "name",
-							"value": "Mustopaa",
+							"value": "Mustopa Mahmud",
 							"type": "text"
 						},
 						{
@@ -325,14 +325,14 @@
 					]
 				},
 				"url": {
-					"raw": "{{host}}/api/family-member/29",
+					"raw": "{{host}}/api/family-member/12",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
 						"api",
 						"family-member",
-						"29"
+						"12"
 					]
 				}
 			},
@@ -354,14 +354,14 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "{{host}}/api/family-member/14",
+					"raw": "{{host}}/api/family-member/12",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
 						"api",
 						"family-member",
-						"14"
+						"12"
 					]
 				}
 			},
