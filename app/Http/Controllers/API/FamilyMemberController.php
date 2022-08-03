@@ -222,6 +222,12 @@ class FamilyMemberController extends APIController
     {
         $func = function () use ($id) {
             $member = FamilyMember::findOrFail($id);
+
+            foreach ($member->children as $child) {
+                $child->parent_id = null;
+                $child->save();
+            }
+
             $member->delete();
 
             $message = "$member->name " . __('successfully deleted.');

@@ -113,6 +113,11 @@ class FamilyMemberController extends Controller
      */
     public function destroy(FamilyMember $member)
     {
+        foreach ($member->children as $child) {
+            $child->parent_id = null;
+            $child->save();
+        }
+
         $member->delete();
 
         $message = "$member->name " . __('successfully deleted.');
