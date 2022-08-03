@@ -74,12 +74,16 @@ Open the app on your browser at <http://127.0.0.1:8000>
   
 * **URL Params**
 
-    `query=[string]` (Optional)\
-    `gender=[m|f]` (Optional)
+   **Required:**
+
+   None
+
+   **Optional:**
+
+    `query=[string]`\
+    `gender=[m|f]`
 
 * **Data Params**
-
-   **Required:**
 
    None
 
@@ -229,12 +233,16 @@ Open the app on your browser at <http://127.0.0.1:8000>
   
 * **URL Params**
 
-    `query=[string]` (Optional)\
-    `gender=[m|f]` (Optional)
+   **Required:**
+
+   None
+
+   **Optional:**
+
+    `query=[string]`\
+    `gender=[m|f]`
 
 * **Data Params**
-
-   **Required:**
 
    None
 
@@ -333,12 +341,16 @@ Open the app on your browser at <http://127.0.0.1:8000>
   
 * **URL Params**
 
-    `query=[string]` (Optional)\
-    `gender=[m|f]` (Optional)
+   **Required:**
+
+   None
+
+   **Optional:**
+
+    `query=[string]`\
+    `gender=[m|f]`
 
 * **Data Params**
-
-   **Required:**
 
    None
 
@@ -449,11 +461,15 @@ Open the app on your browser at <http://127.0.0.1:8000>
   
 * **URL Params**
 
-    `query=[string]` (Optional)
+   **Required:**
+
+   None
+
+   **Optional:**
+
+    `query=[string]`
 
 * **Data Params**
-
-   **Required:**
 
    None
 
@@ -549,11 +565,15 @@ Open the app on your browser at <http://127.0.0.1:8000>
   
 * **URL Params**
 
-    `query=[string]` (Optional)
+   **Required:**
+
+   None
+
+   **Optional:**
+
+    `query=[string]`
 
 * **Data Params**
-
-   **Required:**
 
    None
 
@@ -637,11 +657,15 @@ Open the app on your browser at <http://127.0.0.1:8000>
   
 * **URL Params**
 
-    `query=[string]` (Optional)
+   **Required:**
+
+   None
+
+   **Optional:**
+
+    `query=[string]`
 
 * **Data Params**
-
-   **Required:**
 
    None
 
@@ -712,6 +736,69 @@ Open the app on your browser at <http://127.0.0.1:8000>
       url: "http://localhost:8000/api/family-member/10/cousins",
       data: { 
         gender: 'm', 
+      },
+      dataType: "json",
+      type : "GET",
+      success : function(r) {
+        console.log(r);
+      }
+    });
+  ```
+
+---
+
+### **Create Family Member**
+
+  Returns created family member.
+
+* **URL**
+
+  <http://localhost:8000/api/family-member>
+
+* **Method:**
+
+  `POST`
+  
+* **URL Params**
+
+    None
+
+* **Data Params**
+
+   **Required:**
+
+    `name=[string]`\
+    `gender=[m|f]`
+
+   **Optional:**
+
+    `parent_id=[int]`
+
+* **Success Response:**
+
+  * **Code:** 200 OK\
+    **Content:** `{
+    "data": {
+        "name": "Mustopa",
+        "gender": "m",
+        "parent_id": "5",
+        "id": 12
+    },
+    "messages": [
+        "Mustopa successfully created."
+    ],
+    "error": false
+}`
+
+* **Sample Call:**
+
+  ```javascript
+    $.ajax({
+      url: "http://localhost:8000/api/family-member",
+      data: { 
+        name: "Mustopa", 
+        gender: "m", 
+        parent_id: "5", 
       },
       dataType: "json",
       type : "GET",
