@@ -807,3 +807,124 @@ Open the app on your browser at <http://127.0.0.1:8000>
       }
     });
   ```
+
+---
+
+### **Update Family Member**
+
+  Returns updated family member.
+
+* **URL**
+
+  <http://localhost:8000/api/family-member/12>
+
+* **Method:**
+
+  `PUT`
+  
+* **URL Params**
+
+    None
+
+* **Data Params**
+
+   **Required:**
+
+    `name=[string]`\
+    `gender=[m|f]`
+
+   **Optional:**
+
+    `parent_id=[int]`
+
+* **Success Response:**
+
+  * **Code:** 200 OK\
+    **Content:** `{
+    "data": {
+        "id": 12,
+        "parent_id": "5",
+        "name": "Mustopa Mahmud",
+        "gender": "m"
+    },
+    "messages": [
+        "Mustopa Mahmud successfully updated."
+    ],
+    "error": false
+}`
+
+* **Sample Call:**
+
+  ```javascript
+    $.ajax({
+      url: "http://localhost:8000/api/family-member/12",
+      data: { 
+        name: "Mustopa Mahmud", 
+        gender: "m", 
+        parent_id: "5", 
+      },
+      dataType: "json",
+      type : "PUT",
+      success : function(r) {
+        console.log(r);
+      }
+    });
+  ```
+
+---
+
+### **Delete Family Member**
+
+  Returns deleted family member.
+
+* **URL**
+
+  <http://localhost:8000/api/family-member/12>
+
+* **Method:**
+
+  `DELETE`
+  
+* **URL Params**
+
+    None
+
+* **Data Params**
+
+   **Required:**
+
+    None
+
+   **Optional:**
+
+    None
+
+* **Success Response:**
+
+  * **Code:** 200 OK\
+    **Content:** `{
+    "data": {
+        "id": 12,
+        "parent_id": 5,
+        "name": "Mustopa Mahmud",
+        "gender": "m",
+        "children": []
+    },
+    "messages": [
+        "Mustopa Mahmud successfully deleted."
+    ],
+    "error": false
+}`
+
+* **Sample Call:**
+
+  ```javascript
+    $.ajax({
+      url: "http://localhost:8000/api/family-member/12",
+      dataType: "json",
+      type : "DELETE",
+      success : function(r) {
+        console.log(r);
+      }
+    });
+  ```
