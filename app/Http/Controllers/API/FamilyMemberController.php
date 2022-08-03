@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\API;
 
 use App\Models\FamilyMember;
-use Illuminate\Http\Request;
 
 class FamilyMemberController extends APIController
 {
